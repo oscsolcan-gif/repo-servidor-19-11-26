@@ -1,0 +1,10 @@
+# Ignorar la carpeta de paquetes de npm
+# (pesa mucho y se recupera con "npm install")
+node_modules/
+
+# Ignorar las variables de entorno
+# (configuración que NO se sube a GitHub)
+.env
+
+# Ignorar archivos de log
+*.log
