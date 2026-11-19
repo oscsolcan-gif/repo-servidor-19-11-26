@@ -1,6 +1,6 @@
-# Práctica servidor · productos y servicios
+# Práctica Express · servidor y API de productos y servicios
 
-Servidor con **Express** que devuelve **2 productos** y **2 servicios** en JSON, montado por capas como en la clase del 19-11-2026.
+Servidor con **Express** y una **API** que devuelve **2 productos** y **2 servicios** en JSON, montado por capas como en la clase del 19-11-2026.
 
 ## Estructura
 
