@@ -35,14 +35,34 @@ nodemon src/app.js
 
 ```
 src/
-├── app.js                            servidor: arranca y monta las rutas
-├── routes/publicRoutes.js            rutas: qué dirección va a qué función
-└── controllers/publicControllers.js  controladores: qué se contesta
+├── app.js                              servidor: arranca, lee JSON y monta las rutas
+├── routes/
+│   ├── publicRoutes.js                 GET /productos
+│   └── serviciosRoutes.js              los 5 endpoints de /servicios
+└── controllers/
+    ├── publicControllers.js            qué se contesta en /productos
+    └── serviciosController.js          qué se contesta en /servicios (CRUD)
 ```
 
-## Rutas
+## Endpoints
 
-| Método | Dirección | Contesta |
-|---|---|---|
-| GET | `http://localhost:3000/productos` | 200 · `ok`, `msg` y 2 productos |
-| GET | `http://localhost:3000/servicios` | 200 · `ok`, `msg` y 2 servicios |
+| Método | Dirección | Qué hace | Contesta |
+|---|---|---|---|
+| GET | `/productos` | todos los productos | 200 |
+| GET | `/servicios` | todos los servicios | 200 |
+| GET | `/servicios/:id` | un servicio por su id | 200 · 404 si no existe |
+| POST | `/servicios` | crea un servicio | 201 · 400 si faltan datos |
+| PUT | `/servicios/:id` | cambia un servicio | 200 · 404 si no existe · 400 si faltan datos |
+| DELETE | `/servicios/:id` | borra un servicio | 200 · 404 si no existe |
+
+Para POST y PUT, en Postman: **Body › raw › JSON**, con los tres datos obligatorios:
+
+```javascript
+{
+  "nombre": "Hosting",
+  "descripcion": "Alojamos tu web",
+  "precio": 10
+}
+```
+
+> Los servicios se guardan en memoria: al reiniciar el servidor vuelven a ser los 2 de partida.
