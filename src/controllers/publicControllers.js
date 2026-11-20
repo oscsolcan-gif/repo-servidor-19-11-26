@@ -1,4 +1,5 @@
 // CONTROLADORES: aquí se decide QUÉ se contesta en cada ruta.
+// (Los servicios tienen ahora su propio controlador: serviciosController.js)
 // Cada función recibe:
 //   req -> lo que pide quien llama (la petición)
 //   res -> lo que le contestamos (la respuesta)
@@ -22,30 +23,6 @@ export const getProductos = (req, res) => {
                 id: 2,
                 nombre: 'Taza',
                 precio: 8
-            }
-        ]
-    })
-
-}
-
-
-//GET SERVICIOS
-export const getServicios = (req, res) => {
-
-    // Igual que la de productos, pero con los 2 servicios
-    res.status(200).json({
-        ok: true,
-        msg: 'obteniendo servicios',
-        servicios: [
-            {
-                id: 1,
-                nombre: 'Diseño web',
-                descripcion: 'Hacemos tu página web'
-            },
-            {
-                id: 2,
-                nombre: 'Mantenimiento',
-                descripcion: 'Revisamos tu web cada mes'
             }
         ]
     })
