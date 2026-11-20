@@ -2,21 +2,39 @@
 
 Servidor con **Express** y una **API** que devuelve **2 productos** y **2 servicios** en JSON, montado por capas como en la clase del 19-11-2026.
 
+## Puesta en marcha
+
+1. Clona el repositorio y entra en la carpeta
+
+```bash
+git clone https://github.com/oscsolcan-gif/repo-servidor-19-11-26.git
+cd repo-servidor-19-11-26
+```
+
+2. Renombra el archivo `.env.template` por `.env` y sustituye los valores por los tuyos (el puerto, por ejemplo `PORT=3000`)
+
+3. Instala los paquetes
+
+```bash
+npm install
+```
+
+4. Arranca el servidor y espera a ver `Servidor a la escucha del puerto 3000`
+
+```bash
+nodemon src/app.js
+```
+
+> Si no tienes `nodemon`, instálalo una vez con `npm install -g nodemon`, o arranca con `node src/app.js`.
+
 ## Estructura
 
 ```
 src/
-├── app.js                          servidor: arranca y monta las rutas
-├── routes/publicRoutes.js          rutas: qué dirección va a qué función
+├── app.js                            servidor: arranca y monta las rutas
+├── routes/publicRoutes.js            rutas: qué dirección va a qué función
 └── controllers/publicControllers.js  controladores: qué se contesta
 ```
-
-## Cómo arrancarlo
-
-1. Instalar los paquetes: `npm install`
-2. Crear un fichero `.env` en la raíz con `PORT=3000` (no se sube a GitHub)
-3. Arrancar: `nodemon src/app.js` (o `node src/app.js`)
-4. Esperar a ver `Servidor a la escucha del puerto 3000`
 
 ## Rutas
 
