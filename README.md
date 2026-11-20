@@ -1,22 +1,26 @@
-# Práctica Express · servidor y API de productos y servicios
+# PRACTICA API
 
 Servidor con **Express** y una **API** que devuelve **2 productos** y **2 servicios** en JSON, montado por capas como en la clase del 19-11-2026.
 
 ## Puesta en marcha
 
-1. Clona el repositorio y entra en la carpeta
+1. Clona el repositorio
 
 ```bash
 git clone https://github.com/oscsolcan-gif/repo-servidor-19-11-26.git
 cd repo-servidor-19-11-26
 ```
 
-2. Renombra el archivo `.env.template` por `.env` y sustituye los valores por los tuyos (el puerto, por ejemplo `PORT=3000`)
-
-3. Instala los paquetes
+2. Instala dependencias
 
 ```bash
-npm install
+npm i
+```
+
+3. Renombra el archivo `.env.template` por `.env` y sustituye los datos
+
+```javascript
+PORT=3000   // el número del puerto
 ```
 
 4. Arranca el servidor y espera a ver `Servidor a la escucha del puerto 3000`
